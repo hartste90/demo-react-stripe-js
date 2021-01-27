@@ -6,6 +6,9 @@ import Row from "../components/prebuilt/Row";
 import DonutShop from "../components/prebuilt/DonutShop";
 import CheckoutForm from "../components/CheckoutForm";
 import getDonutPrice from "../utils/get-donut-price";
+import QueryCodeForm from "../components/QueryCodeForm";
+
+
 
 const MainPage = props => {
   const [numDonuts, setNumDonuts] = useState(1);
@@ -15,7 +18,8 @@ const MainPage = props => {
 
   return (
     <Layout title="Donut Shop">
-      <Row>
+          <Row>
+              HOWDY
         <DonutShop
           onAddDonut={addDonut}
           onRemoveDonut={remDonut}
@@ -26,7 +30,10 @@ const MainPage = props => {
         price={getDonutPrice(numDonuts)}
         onSuccessfulCheckout={() => Router.push("/success")}
       />
+      <QueryCodeForm></QueryCodeForm>
     </Layout>
+
+    
   );
 };
 

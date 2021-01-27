@@ -47,7 +47,7 @@ const CheckoutForm = ({ price, onSuccessfulCheckout }) => {
         postal_code: ev.target.zip.value
       }
     };
-
+    
     setProcessingTo(true);
 
     const cardElement = elements.getElement("card");
